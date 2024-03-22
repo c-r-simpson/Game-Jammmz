@@ -1,11 +1,13 @@
 import logo from "./logo.svg";
 import "./App.css";
 import Header from "./Components/Header/Header";
+import GameGrid from "./Components/GameData/GameGrid";
 
 function App() {
   return (
     <>
       <Header />
+      <GameGrid />
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />

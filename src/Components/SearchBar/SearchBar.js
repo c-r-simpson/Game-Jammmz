@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 function SearchBar() {
   return (
     <>
-      <label for="searchBar" style={{ fontSize: "1.5rem" }}>
+      <label htmlFor="searchBar" style={{ fontSize: "1.5rem" }}>
         Search Gamz:
       </label>
       <input

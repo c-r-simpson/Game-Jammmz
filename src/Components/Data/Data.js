@@ -3,18 +3,23 @@ import React, { useEffect, useState } from "react";
 function Data() {
   const [data, setData] = useState([]);
 
-  const url = `https://api.mobygames.com/v1/games/random?api_key=moby_NjjcBgWV6rMBIde6TOXn2AUpSKw`;
-  //${process.env.MOBY_KEY}
+  const auth = process.env.MOBY_KEY;
+  const makeAPICall = async () => {
+    try {
+      const response = await fetch(
+        `https://api.mobygames.com/v1/games/random?api_key=${auth}`
+      );
+      const result = await response.json();
+      console.log("auth", auth);
+      console.log("Your results, sir: ", result);
+      setData(result);
+    } catch (err) {
+      console.log("error: ", err);
+    }
+  };
   useEffect(() => {
-    fetch(url)
-      .then((response) => response.json())
-      .then((res) => {
-        setData(res);
-      })
-      .catch((err) => console.log("error: ", err));
-  });
-
-  console.log("data: ", data);
+    makeAPICall();
+  }, []);
 }
 
 export default Data;

@@ -3,13 +3,8 @@ import React, { useState, useEffect } from "react";
 function GameGrid() {
   const gridContainerStyle = {
     display: "grid",
-    gridTemplateRows: "300px 300px 300px",
-    gridTemplateColumns: "525px 525px 525px",
-  };
-
-  const gridDivStyle = {
-    display: "flex",
-    alignItems: "center",
+    gridTemplateColumns: "repeat(3, 600px)",
+    border: "5px solid red",
     justifyContent: "center",
   };
 
@@ -21,70 +16,52 @@ function GameGrid() {
 
   return (
     <>
-      <div style={gridContainerStyle}>
-        <div style={gridDivStyle}>
-          <img
-            style={girdImgStyle}
-            alt="willem"
-            src="https://www.flickeringmyth.com/wp-content/uploads/2017/08/Florida-Project.png"
-          />
-        </div>
-        <div style={gridDivStyle}>
-          <img
-            style={girdImgStyle}
-            alt="willem"
-            src="https://www.flickeringmyth.com/wp-content/uploads/2017/08/Florida-Project.png"
-          />
-        </div>
-        <div style={gridDivStyle}>
-          <img
-            style={girdImgStyle}
-            alt="willem"
-            src="https://www.flickeringmyth.com/wp-content/uploads/2017/08/Florida-Project.png"
-          />
-        </div>
-        <div style={gridDivStyle}>
-          <img
-            style={girdImgStyle}
-            alt="willem"
-            src="https://www.flickeringmyth.com/wp-content/uploads/2017/08/Florida-Project.png"
-          />
-        </div>
-        <div style={gridDivStyle}>
-          <img
-            style={girdImgStyle}
-            alt="willem"
-            src="https://www.flickeringmyth.com/wp-content/uploads/2017/08/Florida-Project.png"
-          />
-        </div>
-        <div style={gridDivStyle}>
-          <img
-            style={girdImgStyle}
-            alt="willem"
-            src="https://www.flickeringmyth.com/wp-content/uploads/2017/08/Florida-Project.png"
-          />
-        </div>
-        <div style={gridDivStyle}>
-          <img
-            style={girdImgStyle}
-            alt="willem"
-            src="https://www.flickeringmyth.com/wp-content/uploads/2017/08/Florida-Project.png"
-          />
-        </div>
-        <div style={gridDivStyle}>
-          <img
-            style={girdImgStyle}
-            alt="willem"
-            src="https://www.flickeringmyth.com/wp-content/uploads/2017/08/Florida-Project.png"
-          />
-        </div>
-        <div style={gridDivStyle}>
-          <img
-            style={girdImgStyle}
-            alt="willem"
-            src="https://www.flickeringmyth.com/wp-content/uploads/2017/08/Florida-Project.png"
-          />
-        </div>
+      <div className="gridContainer" style={gridContainerStyle}>
+        <img
+          style={girdImgStyle}
+          alt="willem"
+          src="https://www.flickeringmyth.com/wp-content/uploads/2017/08/Florida-Project.png"
+        />
+        <img
+          style={girdImgStyle}
+          alt="willem"
+          src="https://www.flickeringmyth.com/wp-content/uploads/2017/08/Florida-Project.png"
+        />
+        <img
+          style={girdImgStyle}
+          alt="willem"
+          src="https://www.flickeringmyth.com/wp-content/uploads/2017/08/Florida-Project.png"
+        />
+        <img
+          style={girdImgStyle}
+          alt="willem"
+          src="https://www.flickeringmyth.com/wp-content/uploads/2017/08/Florida-Project.png"
+        />
+        <img
+          style={girdImgStyle}
+          alt="willem"
+          src="https://www.flickeringmyth.com/wp-content/uploads/2017/08/Florida-Project.png"
+        />
+        <img
+          style={girdImgStyle}
+          alt="willem"
+          src="https://www.flickeringmyth.com/wp-content/uploads/2017/08/Florida-Project.png"
+        />
+        <img
+          style={girdImgStyle}
+          alt="willem"
+          src="https://www.flickeringmyth.com/wp-content/uploads/2017/08/Florida-Project.png"
+        />
+        <img
+          style={girdImgStyle}
+          alt="willem"
+          src="https://www.flickeringmyth.com/wp-content/uploads/2017/08/Florida-Project.png"
+        />
+        <img
+          style={girdImgStyle}
+          alt="willem"
+          src="https://www.flickeringmyth.com/wp-content/uploads/2017/08/Florida-Project.png"
+        />
       </div>
     </>
   );

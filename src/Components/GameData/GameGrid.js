@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 
-function GameGrid() {
+function GameGrid(coverImages) {
+  console.log("GameGrid coverImages: ", coverImages.coverImage);
   const gridContainerStyle = {
     display: "grid",
-    gridTemplateColumns: "repeat(3, 600px)",
+    gridTemplateColumns: "repeat(3, auto)",
     border: "5px solid red",
     justifyContent: "center",
   };
@@ -20,47 +21,47 @@ function GameGrid() {
         <img
           style={girdImgStyle}
           alt="willem"
-          src="https://www.flickeringmyth.com/wp-content/uploads/2017/08/Florida-Project.png"
+          src={`${coverImages.coverImage[0]}`}
         />
         <img
           style={girdImgStyle}
           alt="willem"
-          src="https://www.flickeringmyth.com/wp-content/uploads/2017/08/Florida-Project.png"
+          src={`${coverImages.coverImage[1]}`}
         />
         <img
           style={girdImgStyle}
           alt="willem"
-          src="https://www.flickeringmyth.com/wp-content/uploads/2017/08/Florida-Project.png"
+          src={`${coverImages.coverImage[2]}`}
         />
         <img
           style={girdImgStyle}
           alt="willem"
-          src="https://www.flickeringmyth.com/wp-content/uploads/2017/08/Florida-Project.png"
+          src={`${coverImages.coverImage[3]}`}
         />
         <img
           style={girdImgStyle}
           alt="willem"
-          src="https://www.flickeringmyth.com/wp-content/uploads/2017/08/Florida-Project.png"
+          src={`${coverImages.coverImage[4]}`}
         />
         <img
           style={girdImgStyle}
           alt="willem"
-          src="https://www.flickeringmyth.com/wp-content/uploads/2017/08/Florida-Project.png"
+          src={`${coverImages.coverImage[5]}`}
         />
         <img
           style={girdImgStyle}
           alt="willem"
-          src="https://www.flickeringmyth.com/wp-content/uploads/2017/08/Florida-Project.png"
+          src={`${coverImages.coverImage[6]}`}
         />
         <img
           style={girdImgStyle}
           alt="willem"
-          src="https://www.flickeringmyth.com/wp-content/uploads/2017/08/Florida-Project.png"
+          src={`${coverImages.coverImage[7]}`}
         />
         <img
           style={girdImgStyle}
           alt="willem"
-          src="https://www.flickeringmyth.com/wp-content/uploads/2017/08/Florida-Project.png"
+          src={`${coverImages.coverImage[8]}`}
         />
       </div>
     </>

@@ -1,0 +1,12 @@
+0
+: 
+{first_release_date: '2019-03-22', platform_id: 3, platform_name: 'Windows'}
+1
+: 
+{first_release_date: '2019-03-22', platform_id: 141, platform_name: 'PlayStation 4'}
+2
+: 
+{first_release_date: '2019-03-22', platform_id: 142, platform_name: 'Xbox One'}
+3
+: 
+{first_release_date: '2020-10-28', platform_id: 281, platform_name: 'Stadia'}

@@ -3,9 +3,11 @@ import GameGrid from "../GameData/GameGrid";
 
 function Data() {
   const [coverImages, setCoverImages] = useState([]);
-  console.log("Hello I'm at the top");
+
   const randomArray = [];
-  for (let i = 0; i < 9; i++) {
+  const coverURLs = [];
+
+  for (let i = 0; i < 30; i++) {
     randomArray.push(Math.ceil(Math.random() * 132992));
   }
   const randomIDs = randomArray
@@ -20,16 +22,17 @@ function Data() {
   const auth = "&api_key=moby_NjjcBgWV6rMBIde6TOXn2AUpSKw";
   const requestURL = `${url}${randomIDs}${auth}`;
 
-  console.log("requestURL: ", requestURL);
+  console.log("Complete requestURL: ", requestURL);
 
   const makeAPICall = async () => {
     try {
       const response = await fetch(requestURL);
       const gameObject = await response.json();
       console.log("Your object, sir: ", gameObject);
-      const coverURLs = [];
+
       for (let i = 0; i < gameObject.games.length; i++) {
-        coverURLs.push(gameObject.games[i].sample_cover.image);
+        if (gameObject.games[i]?.sample_cover?.image)
+          coverURLs.push(gameObject.games[i].sample_cover.image);
       }
       console.log("this should be an array of urls: ", coverURLs);
       setCoverImages(coverURLs);
@@ -39,7 +42,7 @@ function Data() {
   };
   useEffect(() => {
     makeAPICall();
-    console.log("cover images: ", coverImages);
+    console.log("coverImages state prop: ", coverImages);
   }, []);
 
   return <GameGrid coverImage={coverImages} />;

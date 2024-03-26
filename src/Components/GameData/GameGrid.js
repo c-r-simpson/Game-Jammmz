@@ -2,17 +2,19 @@ import React, { useState, useEffect } from "react";
 
 function GameGrid(coverImages) {
   console.log("GameGrid coverImages: ", coverImages.coverImage);
+
   const gridContainerStyle = {
     display: "grid",
-    gridTemplateColumns: "repeat(3, auto)",
+    gridTemplateColumns: "repeat(3, 1fr)",
+    gridTemplateRows: "minmax(300px, auto)",
     border: "5px solid red",
     justifyContent: "center",
   };
 
   const girdImgStyle = {
-    display: "flex",
-    maxWidth: "100%",
-    maxHeight: "100%",
+    objectFit: "cover",
+    width: "100%",
+    height: "100%",
   };
 
   return (
